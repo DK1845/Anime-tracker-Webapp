@@ -12,6 +12,15 @@ const AnimeSchema = new mongoose.Schema({
   genres: [String],
   aired: String,
   rating: String,
+  streamingLinks: {
+    type: Map,
+    of: String,
+    default: {}
+  },
+  videoUrl: {
+    type: String,
+    default: ''
+  },
   createdAt: { type: Date, default: Date.now }
 });
 
